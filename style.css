@@ -1,0 +1,22 @@
+nav {
+    background-color: #FFF3EF;
+    color: #AB6B5A;
+    display: inline-block;
+}
+
+nav li {
+    display: inline;
+    float: left;
+    
+}
+
+nav li a {
+    display: block;
+    padding: 10px;
+    color: #AB6B5A;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
