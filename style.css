@@ -48,7 +48,7 @@ h2, h3 {
 }
 .future-items-container{
     display: inline-block;
-    width: calc(100%-100px);
+    width: 60%;
 
 }
 
