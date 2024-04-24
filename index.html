@@ -6,6 +6,14 @@
     <link rel="icon" type="image/x-icon" href="resources/favicon.ico">
     <link rel="stylesheet" href="style.css">
     <title>4/12 Meeting Minutes</title>
+    <style>
+        footer{
+            text-decoration: underline;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav>
@@ -20,7 +28,7 @@
             </li>
             <li>
                 <ul>
-                    <li><a href="#Agenda">Agenda</a></li>
+                    <li><a id="middle" href="#Agenda">Agenda</a></li>
                  <!--    <li>Unresolved Business</li>
                     <li>New Items</li>
                     <li>Items for Future Discussion</li>
@@ -46,25 +54,35 @@
     <hr>
     <section id="General_Logistics">
         <h2>General Logistics</h2>
-        <h3>Attendance</h3>
-        <ul>
-            <li><b>Leader: </b>Sravya Chittuluri, <i>Present</i></li>
-            <li><b>Leader:</b> Ravi Shende, <i>Present</i></li>
-            <li><b>Designer: </b>Benjamin Ryujin, <i>Present</i></li>
-            <li><b>Dev: </b>Brooke Truong, <i>Late</i></li>
-            <li><b>Dev: </b>Nicholas Gao, <i>Present</i></li>
-            <li><b>Dev: </b>Andy Zhang, <i>Absent</i></li>
-            <li><b>Dev: </b>Daniel Luo, <i>Late</i></li>
-            <li><b>Dev: </b>David Anwyl, <i>Present</i></li>
-            <li><b>Dev: </b>Esha Thakur, <i>Late</i></li>
-            <li><b>Dev: </b>Shambhavi Mittal, <i>Present</i></li>
-            <li><b>Dev: </b>Smruthi Gowtham, <i>Present</i></li>
-            <li><b>Dev: </b>Teresa Tian, <i>Present</i></li>
-        </ul>
-        <h3>Location</h3>
-            <p>Price Center</p>
-        <h3>Meeting Time</h3>
-            <p>12 PM to 1 PM</p>
+        <div class="logistics-container">
+            <div class="attendance-container">
+                <h3>Attendance</h3>
+                <ul>
+                    <li><b>Leader: </b>Sravya Chittuluri, <i>Present</i></li>
+                    <li><b>Leader:</b> Ravi Shende, <i>Present</i></li>
+                    <li><b>Designer: </b>Benjamin Ryujin, <i>Present</i></li>
+                    <li><b>Dev: </b>Brooke Truong, <i>Late</i></li>
+                    <li><b>Dev: </b>Nicholas Gao, <i>Present</i></li>
+                    <li><b>Dev: </b>Andy Zhang, <i>Absent</i></li>
+                    <li><b>Dev: </b>Daniel Luo, <i>Late</i></li>
+                    <li><b>Dev: </b>David Anwyl, <i>Present</i></li>
+                    <li><b>Dev: </b>Esha Thakur, <i>Late</i></li>
+                    <li><b>Dev: </b>Shambhavi Mittal, <i>Present</i></li>
+                    <li><b>Dev: </b>Smruthi Gowtham, <i>Present</i></li>
+                    <li><b>Dev: </b>Teresa Tian, <i>Present</i></li>
+                </ul>
+            </div>
+            <div class="location-container">
+                <h3>Location</h3>
+                <p>Price Center</p>
+            </div>
+            <div class="meeting-time-container">
+                <h3>Meeting Time</h3>
+                <p>12 PM to 1 PM</p>
+            </div>
+            
+        </div>
+        
     </section>
     <hr>
     <section id="Agenda">
@@ -78,8 +96,8 @@
                 <li>Film group introduction video</li>
             </ol>
         <h3>Items for Future Discussion</h3>
-        <img src="resources/Brand_Styling_guide.jpg" alt="Branding styling guide" height="250">
-            <ol>
+        <ol>
+            <div class="future-items-container">
                 <li>
                     <em>Team Branding</em>
                     <ul>
@@ -90,15 +108,22 @@
                         <li>Record our individual clips, then upload edited video to <strong>/admin/videos/teamintro.mp4</strong></li>
                     </ul>
                 </li>
-                <li>
-                    <em>Management Assignment</em>
-                    <ul>
-                        <li>Upload markdown file of meeting notes to /admin/meetings</li>
-                        <li>invite team mentor (TA) as an administrative collaborator to the group GitHub</li>
-                        <li>Submit link of repo so that the TA can check the meeting notes</li>
-                    </ul>                
-                </li>
-            </ol>
+
+            </div>
+            <img id="brand-styling-guide" src="resources/Brand_Styling_guide.jpg" alt="Branding styling guide" height="250">
+
+            
+            <li>
+                <em>Management Assignment</em>
+                <ul>
+                    <li>Upload markdown file of meeting notes to /admin/meetings</li>
+                    <li>invite team mentor (TA) as an administrative collaborator to the group GitHub</li>
+                    <li>Submit link of repo so that the TA can check the meeting notes</li>
+                </ul>                
+            </li>
+        </ol>
+        
+        
         <h3>Decisions & Reasonings</h3>
             <p>Discussed team contract decisions in order to respect each other, create a more collaborative <br> environment, encourage healthy disagreements, and increase productivity.</p>        
         <h3>Action Items</h3>
@@ -106,108 +131,122 @@
             <li>Completion of team contract</li>
             <li>Decided the team introduction video format</li>
         </ul>
+        
     </section>
     <hr>
     <div>
         <h2><span>Attractive</span> heading (to be styled)</h2>
     </div>
-    <footer>
-        End of meeting minutes
+    <footer style="text-align: center;">
+       End of meeting minutes
     </footer>
-
-    <section id="Miscellaneous">
-        <h2>Miscellaneous stuff</h2>
-        <div>
-            <details>
-                <summary>Favorite Song</summary>
-                <img src="resources/Tattoo_album_cover.webp" alt="Tattoo album cover" height="50" width="50">
-                <audio src="resources/Jukjae(적재)_Tattoo(타투).mp3" controls>
-                    Browser does not support the audio tag.
-                </audio>
-                <br><em>Tattoo</em> - Jukjae
-            </details>
-        </div>
-        <br>
-        <div>
-            <details>
-                <summary>Video of me punching</summary>
-                <video controls height="250">
-                    <source src="resources/Punching_bag_video.MP4" type="video/mp4">
-                    Browser does not support the video tag.
-                </video>
-            </details>
-        </div>
-        <br>
-        <form>
-            <fieldset>
-              <legend>Say Something!</legend>
-              
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="name">
-              
-              <br>
-              
-              <label for="birthdate">Birthday:</label>
-              <input type="date" id="birthdate" name="birthdate">
-              
-              <br>
-              
-              <label>Gender:</label><br>
-              <input type="radio" id="male" name="gender" value="male">
-              <label for="male">Male</label><br>
-              <input type="radio" id="female" name="gender" value="female">
-              <label for="female">Female</label><br>
-              <input type="radio" id="other" name="gender" value="other">
-              <label for="other">Other</label>
-              
-              <br>
-              
-              <label for="country">Country:</label>
-              <input list="countries" id="country" name="country">
-              <datalist id="countries">
-                <option value="USA">
-                <option value="Canada">
-                <option value="UK">
-                <option value="Australia">
-                <option value="Japan">
-              </datalist>
-              
-              <br>
-              
-              <label for="city">City:</label>
-              <select id="city" name="city">
-                <option value="San Diego">San Diego</option>
-                <option value="New York">New York</option>
-                <option value="Los Angeles">Los Angeles</option>
-                <option value="Chicago">Chicago</option>
-                <option value="Toronto">Toronto</option>
-                <option value="London">London</option>
-              </select>
-
-
-              <br>
-              
-              <label>Hobbies:</label><br>
-              <input type="checkbox" id="hobby1" name="hobbies" value="Badminton">
-              <label for="hobby1">Badminton</label><br>
-              <input type="checkbox" id="hobby2" name="hobbies" value="Guitar">
-              <label for="hobby2">Guitar</label><br>
-              <input type="checkbox" id="hobby3" name="hobbies" value="Other">
-              <label for="hobby3">Other</label>
-              
-              
-              <br>
-              
-              <label for="about">About Me:</label><br>
-              <textarea id="about" name="about" rows="4" cols="50"></textarea>
-              
-              
-              <br><br>
-              
-              <button type="submit">Send!</button>
-            </fieldset>
-          </form>
-    </section>
+    <hr>
+    <div class="misc-container">
+        <section id="Miscellaneous">
+            <h2>Miscellaneous stuff</h2>
+            <div class="facts-container">
+                <div class="fact-container">
+                    <details>
+                        <summary>Favorite Song</summary>
+                        <img src="resources/Tattoo_album_cover.webp" alt="Tattoo album cover" height="50" width="50">
+                        <audio src="resources/Jukjae(적재)_Tattoo(타투).mp3" controls>
+                            Browser does not support the audio tag.
+                        </audio>
+                        <br><em>Tattoo</em> - Jukjae
+                    </details>
+                </div>
+                <div class="fact-container">
+                    <details>
+                        <summary>Video of me punching</summary>
+                        <video controls height="200rem">
+                            <source src="resources/Punching_bag_video.MP4" type="video/mp4">
+                            Browser does not support the video tag.
+                        </video>
+                    </details>
+                </div>
+                <div class="fact-container">
+                    <details>
+                        <summary>Korean!</summary>
+                        <p id="korean-font">안녕하세요! 저는 벤지라고 합니다.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+            <br>
+            <div class="form-container">
+                <form id="form">
+                    <fieldset>
+                      <legend>Say Something!</legend>
+                      
+                      <label for="name">Name:</label>
+                      <input type="text" id="name" name="name">
+                      
+                      <br>
+                      
+                      <label for="birthdate">Birthday:</label>
+                      <input type="date" id="birthdate" name="birthdate">
+                      
+                      <br>
+                      
+                      <label>Gender:</label><br>
+                      <input type="radio" id="male" name="gender" value="male">
+                      <label for="male">Male</label><br>
+                      <input type="radio" id="female" name="gender" value="female">
+                      <label for="female">Female</label><br>
+                      <input type="radio" id="other" name="gender" value="other">
+                      <label for="other">Other</label>
+                      
+                      <br>
+                      
+                      <label for="country">Country:</label>
+                      <input list="countries" id="country" name="country">
+                      <datalist id="countries">
+                        <option value="USA">
+                        <option value="Canada">
+                        <option value="UK">
+                        <option value="Australia">
+                        <option value="Japan">
+                      </datalist>
+                      
+                      <br>
+                      
+                      <label for="city">City:</label>
+                      <select id="city" name="city">
+                        <option value="San Diego">San Diego</option>
+                        <option value="New York">New York</option>
+                        <option value="Los Angeles">Los Angeles</option>
+                        <option value="Chicago">Chicago</option>
+                        <option value="Toronto">Toronto</option>
+                        <option value="London">London</option>
+                      </select>
+        
+        
+                      <br>
+                      
+                      <label>Hobbies:</label><br>
+                      <input type="checkbox" id="hobby1" name="hobbies" value="Badminton">
+                      <label for="hobby1">Badminton</label><br>
+                      <input type="checkbox" id="hobby2" name="hobbies" value="Guitar">
+                      <label for="hobby2">Guitar</label><br>
+                      <input type="checkbox" id="hobby3" name="hobbies" value="Other">
+                      <label for="hobby3">Other</label>
+                      
+                      
+                      <br>
+                      
+                      <label for="about">About Me:</label><br>
+                      <textarea id="about" name="about" rows="4" cols="50"></textarea>
+                      
+                      
+                      <br><br>
+                      
+                      <button type="submit">Send!</button>
+                    </fieldset>
+                  </form>
+            </div>
+            
+    </div>
+   
     <br>
 </body>
 

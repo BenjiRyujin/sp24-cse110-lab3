@@ -1,22 +1,163 @@
+/* Setting CSS variables */
+:root {
+    --title-color: #72472B;
+    --background-color: #FFF3EF;
+    --text-color: #AB6B5A;
+    --object-color: #FAC9B8;
+}
+
+/* Using fallbacks */ 
+body{
+    background-color: var(--background-color, rgb(255,243,239));
+}
+
+h1{
+    color: var(--title-color, hsl(24,45%,31%));
+    text-decoration: underline;
+}
+
+h2{
+    color: var(--text-color, brown);
+}
+
+h3{
+    color: var(--title-color, color(display-p3 0.7 0.2 0.5));
+}
+
+h2, h3 {
+    background-color: var(--background-color);
+}
+.misc-container{
+    border-style: dotted;
+    border-color: var(--object-color);
+    border-width: 5px;
+    border-radius: 0.5in;
+
+    padding: 1rem 2rem 1rem 2rem;
+    margin: auto;
+    display:inline-block;
+}
+
+
+#brand-styling-guide{
+    display:inline;
+    width: 100px;
+    height: auto;
+    margin-left: 1cm;
+    position: absolute;
+}
+.future-items-container{
+    display: inline-block;
+    width: calc(100%-100px);
+
+}
+
+
+#middle{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
 nav {
-    background-color: #FFF3EF;
+    background-color: var(--background-color);
     color: #AB6B5A;
     display: inline-block;
+    text-align: center;
+    position: static;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    & > a {
+        color: tomato;
+    }
 }
 
 nav li {
-    display: inline;
-    float: left;
+    display: inline-block;
     
 }
 
 nav li a {
     display: block;
-    padding: 10px;
+    padding-left: 0;
+    padding-right: 0;
     color: #AB6B5A;
 }
+
+nav li a:hover{
+    color:brown;
+}
+nav li a:active{
+    color:black;
+}
+
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
+
+.logistics-container{
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.facts-container{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    justify-items: start;
+    justify-content: stretch;
+}
+
+
+/* For smaller smartphones */
+@media (max-width: 576px){
+    nav{
+        width:108%;
+    }
+}
+
+/* For larger smartphones and tablets */ 
+
+@media ((min-width: 577px) and (max-width:768px)){
+    nav{
+        width: 100%;
+    }
+}
+
+#korean-font{
+    font-family: "Nanum Brush Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+section[id="Agenda"]{
+    text-align: left;
+}
+
+ul >li {
+    color: black;
+}
+
+div ~ p {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 + h2 {
+    color:#72472B;
+}
+
+div.future-items-container{
+    background-color: var(--background-color);
+}
+
+
