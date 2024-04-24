@@ -54,8 +54,8 @@ h2, h3 {
 
 
 #middle{
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 2em;
+    padding-right: 2em;
     padding-top: 0;
     padding-bottom: 0;
 }
@@ -68,7 +68,7 @@ nav {
     position: static;
     top: 0;
     width: 100%;
-    margin: 0;
+    margin: 0 0 0 0;
     padding: 0;
 
     & > a {
